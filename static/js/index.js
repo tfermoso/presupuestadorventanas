@@ -9,7 +9,27 @@ window.onload=()=>{
         let alto=$("#alto").val();
         let tipo=$("#tipoventana").val();
         if(ancho!="" && alto!=""){
-            alert("calculando..");            
+            url="/calcular"
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                  ancho,
+                  alto,
+                  tipo
+                })
+              })
+              .then(response => response.json())
+              .then(data => {
+                console.log(data);
+                $("#precio").html(data.precio)
+              })
+              .catch(error => {
+                console.error('Error:', error);
+              });
+                        
         }
     })
 
