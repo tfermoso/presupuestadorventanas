@@ -12,7 +12,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="/static/js/index.js"></script>
+
     <link rel="icon" type="image/jpg" href="/static/img/aluminio.ico" />
 </head>
 
@@ -44,22 +47,24 @@
 
             <div class="col-md-8 col-sm-12 ventana">
                 <img id="imagenventana" src="/static/img/blanco.jpg" alt="" srcset="">
-               
-
             </div>
             <div class="col-md-4 col-sm-12 definicion">
+                <div>
+                    <h3>Precio</h3>
+                    <p><strong><span id="precio">234,50</span></strong>€</p>
+                </div>
                 <div class="col-12 form-group">
                     <label for="">Alto (mm)</label>
-                    <input type="number" min="0" step="1" max="5000" class="form-control" placeholder="Alto (mm)">
+                    <input id="alto" type="number" min="0" step="1" max="5000" class="form-control datos" placeholder="Alto (mm)">
                 </div>
                 <div class="col-12 form-group">
                     <label for="">Ancho (mm)</label>
-                    <input type="number" min="0" step="1" max="10000" class="form-control" placeholder="Ancho (mm)">
+                    <input id="ancho" type="number" min="0" step="1" max="10000" class="form-control datos" placeholder="Ancho (mm)">
                 </div>
 
                 <div class="col-12 form-group">
                     <label for="">Tipo</label>
-                    <select class="form-control" name="" id="tipoventana">
+                    <select  class="form-control datos" name="" id="tipoventana">
                         <option value="blanco.jpg">Blanco</option>
                         <option value="madera.jpg">Madera</option>
                         <option value="aluminio.jpg">Aluminio</option>
