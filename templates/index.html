@@ -13,7 +13,7 @@
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
     <script src="/static/js/index.js"></script>
-    <link rel="icon" type="image/jpg" href="/static/img/aluminio.ico"/>
+    <link rel="icon" type="image/jpg" href="/static/img/aluminio.ico" />
 </head>
 
 <body>
@@ -41,22 +41,30 @@
         <br>
 
         <section class="row presupuestador">
-            <div class="col-2 definicion">
-                <input type="number" min="0" step="1" max="5000" class="form-control" placeholder="Alto (mm)">
-            </div>
-            <div class="col-8 ventana">
+
+            <div class="col-md-8 col-sm-12 ventana">
                 <img id="imagenventana" src="/static/img/blanco.jpg" alt="" srcset="">
-                <div class="col-6">
+               
+
+            </div>
+            <div class="col-md-4 col-sm-12 definicion">
+                <div class="col-12 form-group">
+                    <label for="">Alto (mm)</label>
+                    <input type="number" min="0" step="1" max="5000" class="form-control" placeholder="Alto (mm)">
+                </div>
+                <div class="col-12 form-group">
+                    <label for="">Ancho (mm)</label>
                     <input type="number" min="0" step="1" max="10000" class="form-control" placeholder="Ancho (mm)">
                 </div>
 
-            </div>
-            <div class="col-2 definicion">
-                <select class="form-control" name="" id="tipoventana">
-                    <option value="blanco.jpg">Blanco</option>
-                    <option value="madera.jpg">Madera</option>
-                    <option value="aluminio.jpg">Aluminio</option>
-                </select>
+                <div class="col-12 form-group">
+                    <label for="">Tipo</label>
+                    <select class="form-control" name="" id="tipoventana">
+                        <option value="blanco.jpg">Blanco</option>
+                        <option value="madera.jpg">Madera</option>
+                        <option value="aluminio.jpg">Aluminio</option>
+                    </select>
+                </div>
             </div>
         </section>
 
