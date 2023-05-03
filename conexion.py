@@ -7,7 +7,7 @@ def select(consulta):
         host="localhost",
         user="root",
         password="",
-        database="ventanas"
+        database="academia"
     )
 
     # Crear un cursor

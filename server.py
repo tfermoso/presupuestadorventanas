@@ -1,10 +1,16 @@
 from flask import Flask, send_from_directory,jsonify,request
+from conexion import select
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     return send_from_directory('templates', 'index.html')
+
+@app.route('/mysql')
+def prueba():
+    datos=select("select * from usuarios")
+    return jsonify(datos)
 
 @app.route('/calcular', methods=['POST'])
 def ajax():
